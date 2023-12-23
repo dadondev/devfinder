@@ -47,23 +47,111 @@
           </form>
         </section>
         <!-- About section start -->
-        <section class="px-6 py-8 bg-white rounded-[15px]">
-          <div>
-            <div>
-              <div>
-                <img src="./images/git-img.jpg" alt="avatar" />
+        <section class="px-6 py-8 bg-white rounded-[15px] md:p-10">
+          <div class="mb-[33px] md:mb-6">
+            <div class="flex gap-[19px] md:items-start md:gap-4">
+              <div class="max-w-[117px] h-auto rounded-[50%]">
+                <img src="./images/git-img.jpg" alt="avatar" class="w-full" />
               </div>
-              <div>
-                <h1 id="name" class="text-[16px] font-bold text-[#2B3442]">
-                  Dadondev
-                </h1>
-                <a
-                  href="https://github.com/"
-                  target="_blank"
-                  id="userName"
-                  class="font-normal text-[13px] text-[#0079FF]"
-                  >@dadondev</a
-                >
+              <div class="lg:flex lg:items-start lg:justify-between grow">
+                <div>
+                  <h1
+                    id="name"
+                    class="text-[16px] font-bold text-[#2B3442] md:text-[26px]"
+                  >
+                    Dadondev
+                  </h1>
+                  <a
+                    href="https://github.com/"
+                    target="_blank"
+                    id="userName"
+                    class="font-normal text-[13px] text-[#0079FF] md:text-base"
+                    >@dadondev</a
+                  >
+                </div>
+                <div>
+                  <span
+                    id="data"
+                    class="text-[#697C9A] text-[13px] md:text-[15px]"
+                    >Joined 25 Jan 2011</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:flex lg:justify-end lg:-translate-y-16 ">
+            <div class="lg:max-w-[470px]">
+              <p id="bio" class="text-[#4B6A9B] text-[13px] mb-5 md:mb-8">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+                odio. Quisque volutpat mattis eros.
+              </p>
+              <div
+                class="max-h-[85px] flex justify-around text-center p-[18px] bg-[#F6F8FF] rounded-[10px] md:text-left mb-6 md:mb-8"
+              >
+                <div>
+                  <span class="text-[#4B6A9B] text-[11px] md:text-[13px]"
+                    >Repos</span
+                  >
+                  <h1
+                    id="repos"
+                    class="text-[#2B3442] text-base font-bold md:text-[22px]"
+                  >
+                    9
+                  </h1>
+                </div>
+                <div>
+                  <div>
+                    <span class="text-[#4B6A9B] text-[11px] md:text-[13px]"
+                      >Followers</span
+                    >
+                    <h1
+                      id="followers"
+                      class="text-[#2B3442] text-base font-bold md:text-[22px]"
+                    >
+                      9300
+                    </h1>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <span class="text-[#4B6A9B] text-[11px] md:text-[13px]"
+                      >Following</span
+                    >
+                    <h1
+                      id="following"
+                      class="text-[#2B3442] text-base font-bold md:text-[22px]"
+                    >
+                      10
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 md:flex-row md:gap-[95px]">
+                <div class="flex flex-col gap-4">
+                  <div class="flex gap-[19px] items-center">
+                    <img src="./images/location.svg" alt="location" />
+                    <a href="https://" id="location" class="text-[#4B6A9B] text-[13px] hover:underline"
+                      >San Fransisco</a
+                    >
+                  </div>
+                  <div class="flex gap-[14px] items-center">
+                    <img src="./images/link.svg" alt="link" />
+                    <a href="https://github.com/" id="blog" class="text-[#4B6A9B] text-[13px] hover:underline"
+                      >https://github.blog</a
+                    >
+                </div>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div class="flex gap-[14px] items-center">
+                  <img src="./images/twitter.svg" alt="twitter">
+                  <a href="https://twitter.com/" id="social" class="text-[#4B6A9B] text-[13px] hover:underline">Not Available</a>
+                </div>
+                <div>
+                  <div class="flex gap-[14px] items-center">
+                    <img src="./images/homes.svg" alt="homes">
+                    <a href="https://github.com" id="home" class="text-[#4B6A9B] text-[13px] hover:underline">@github</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
