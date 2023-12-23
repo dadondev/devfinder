@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devfinder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="h-full flex items-center justify-center bg-[#F6F8FF] font-['Space_Mono']"
+  >
+    <div class="container p-6">
+      <header class="flex items-center justify-between mb-[35px]">
+        <a href="#"><img src="./images/logo.svg" alt="logo" /> </a>
+        <div class="flex items-center gap-4">
+          <span class="font-bold text-[13px]">DARK</span>
+          <button><img src="./images/moon.svg" alt="dark" /></button>
+        </div>
+      </header>
+      <main>
+        <!-- Search section -->
+        <section class="relative bg-white rounded-[15px] overflow-hidden">
+          <form>
+            <input
+              type="text"
+              required
+              class="w-full h-full outline-none shadow-['0px_16px_30px_-10px_rgba(70,96,187,0.20)']"
+              placeholder="Search GitHub username…"
+            />
+            <img src="./images/search.svg" alt="search" class="" />
+            <button type="submit">Search</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
