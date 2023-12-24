@@ -17,33 +17,20 @@ const userSocial = document.querySelector("#social");
 const userGit = document.querySelector("#home");
 // Got user information
 let userObj;
-// Not avaible function
-function notAvailable(el) {
-  if (el) {
-    return el;
-  } else {
-    return "Not Available";
-  }
-}
 // Not Refresh doing
 formEl.addEventListener("submit", async (e) => {
   e.preventDefault();
   await getUsers(inpSearch.value);
-});
-btnSearch.addEventListener("submit", (e) => {
-  e.preventDefault();
-  getUsers(inpSearch.value);
 });
 // is it error
 
 async function getUsers(user, userObj) {
   const response = await fetch(`https://api.github.com/users/${user}`);
   const users = await response.json();
-
   async function errorSearch(e) {
     if (e.login) {
       userObj = e;
-      await elUpdate(e);
+      await update(e);
       console.log(1);
     } else {
       return false;
@@ -53,6 +40,20 @@ async function getUsers(user, userObj) {
 }
 
 // Starting
-async function elUpdate(e) {
-  userAvatar.src = `${e.avatar_url}`;
+let not = "Not available";
+
+// ---------------------
+async function update(obj) {
+  userAvatar.src = `${obj.avatar_url}`;
+  userFirstName.textContent = obj.login ? obj.login : not;
+  userName.href = `https://github.com/${obj.login}`;
+  userName.textContent = `@${obj.login}`;
+  console.log(obj);
+  userJoin.textContent = obj.created_at;
+  userBio.textContent = obj.bio ? obj.bio : not;
+  userBlog.href = obj.blog ? obj.blog : "#";
+  userBlog.textContent = obj.blog ? obj.blog : not;
+  userFollowers.textContent = obj.followers ? obj.followers : "0";
+  userFollowing.textContent = obj.following ? obj.following : "0";
+  userRepos.textContent = obj.public_repos ? obj.public_repos : "0";
 }
