@@ -56,4 +56,12 @@ async function update(obj) {
   userFollowers.textContent = obj.followers ? obj.followers : "0";
   userFollowing.textContent = obj.following ? obj.following : "0";
   userRepos.textContent = obj.public_repos ? obj.public_repos : "0";
+  userLocation.textContent = obj.location ? obj.location : not;
+  userSocial.href = obj.twitter_username
+    ? `https://twiiter.com/${obj.twitter_username}`
+    : "#";
+  userSocial.textContent = obj.twitter_username
+    ? `${obj.twitter_username}`
+    : not;
+
 }
